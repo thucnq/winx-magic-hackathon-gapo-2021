@@ -1,6 +1,8 @@
 :root{
     --pink-primary: #fd79a8;
-    --pink-secondary: #d9e4f5
+    --pink-secondary: #d9e4f5;
+    --internal-distance: 1px;
+    --double-internal-distance: 2px;
 }
 
 body {
@@ -18,8 +20,46 @@ body {
     color: #d2c8c8;
     cursor: pointer
 }
+.feed-image{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
 
 .feed-image img {
     width: 100%;
-    height: auto
+    height: auto;
+}
+
+.space-bar-h{
+    width: 100%;
+    height: var(--internal-distance);
+    display: inline-block;
+}
+
+.space-bar-v{
+    height: 100%;
+    width: var(--internal-distance);
+    display: inline-block;
+}
+
+.feed-image a{
+    display: inline-block;
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.layout-1 a:first-child {
+    width: 100%;
+    margin-bottom: var(--double-internal-distance);
+}
+
+.layout-1 a:nth-child(2) {
+    width: calc(50% - var(--internal-distance));
+}
+
+.layout-1 a:nth-child(3) {
+    width: calc(50% - var(--internal-distance));
+    margin-left: var(--double-internal-distance);
 }
