@@ -62,12 +62,22 @@ body {
     width: 50%;
 }
 
-.double-square-v {
+.double-square-v{
     position: relative;
     width: 50%;
 }
 
-.double-square-h, .rectangle-v-1, .rectangle-v-2 {
+.rectangle-v-1{
+    position: relative;
+    width: 33%;
+}
+
+.rectangle-v-2 {
+    position: relative;
+    width: 66%;
+}
+
+.double-square-h, .rectangle-h-1, .rectangle-h-2 {
     position: relative;
     width: 100%;
 }
@@ -90,7 +100,13 @@ body {
     padding-bottom: 200%;
 }
 
-.rectangle-v-1:after{
+.rectangle-h-1:after{
+    content: "";
+    display: block;
+    padding-bottom: 33%;
+}
+
+.rectangle-h-2:after{
     content: "";
     display: block;
     padding-bottom: 66%;
@@ -99,7 +115,13 @@ body {
 .rectangle-v-2:after{
     content: "";
     display: block;
-    padding-bottom: 33%;
+    padding-bottom: 150%;
+}
+
+.rectangle-v-1:after{
+    content: "";
+    display: block;
+    padding-bottom: 300%;
 }
 
 .content {
@@ -143,3 +165,10 @@ body {
     margin-top: var(--double-internal-distance);
 }
 
+.layout-6 a:last-child {
+    width: calc(66% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+}
+.layout-6 a:last-child:after{
+    padding-bottom: 151%;
+}
