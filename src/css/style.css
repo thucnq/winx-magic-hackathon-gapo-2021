@@ -64,7 +64,6 @@ body {
 
 .double-square-v {
     position: relative;
-    height: 500px;
     width: 50%;
 }
 
@@ -79,12 +78,18 @@ body {
     padding-bottom: 100%;
 }
 
-.double-square-h:after, .double-square-v:after {
+.double-square-h:after{
     content: "";
     display: block;
     padding-bottom: 50%;
 }
   
+.double-square-v:after {
+    content: "";
+    display: block;
+    padding-bottom: 200%;
+}
+
 .content {
     position: absolute;
     width: 100%;
