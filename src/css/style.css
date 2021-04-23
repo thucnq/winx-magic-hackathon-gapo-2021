@@ -81,7 +81,12 @@ body {
     position: relative;
     width: 100%;
 }
-  
+
+.rectangle-h-2-2 {
+    position: relative;
+    width: 66%;
+}
+
 .square:after{
     content: "";
     display: block;
@@ -110,6 +115,12 @@ body {
     content: "";
     display: block;
     padding-bottom: 66%;
+}
+
+.rectangle-h-2-2:after{
+    content: "";
+    display: block;
+    padding-bottom: 75%;
 }
 
 .rectangle-v-2:after{
@@ -220,4 +231,17 @@ body {
 
 .layout-10 a:last-child {
     margin-top: var(--double-internal-distance);
+}
+
+.layout-11 a:first-child::after {
+    padding-bottom: 301%;
+}
+
+.layout-11 a:nth-child(2) {
+    margin-left: var(--double-internal-distance);
+}
+
+.layout-11 a:last-child {
+    margin-top: var(--double-internal-distance);
+    margin-left: var(--double-internal-distance);
 }
