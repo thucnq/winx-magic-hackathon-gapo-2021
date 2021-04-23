@@ -437,3 +437,15 @@ body {
 .layout-23 a:nth-child(2)::after{
     padding-bottom: 152%;
 }
+
+.layout-24 a:first-child, .layout-24 a:nth-child(2), .layout-24 a:nth-child(3){
+    width: calc(33.25% - var(--internal-distance));
+}
+
+.layout-24 a:last-child{
+    margin-top: var(--double-internal-distance);
+}
+
+.layout-24 a:nth-child(2), .layout-24 a:nth-child(3){
+    margin-left: var(--double-internal-distance);
+}
