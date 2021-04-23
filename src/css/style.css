@@ -67,27 +67,27 @@ body {
     width: 50%;
 }
 
-.rectangle-v-1{
+.rectangle-v-4{
     position: relative;
     width: 33%;
 }
 
-.rectangle-v-2 {
+.rectangle-v-8 {
     position: relative;
     width: 66%;
 }
 
-.rectangle-v-2-2 {
+.rectangle-v-8-8 {
     position: relative;
     width: 50%;
 }
 
-.double-square-h, .rectangle-h-1, .rectangle-h-2 {
+.double-square-h, .rectangle-h-4, .rectangle-h-8 {
     position: relative;
     width: 100%;
 }
 
-.rectangle-h-2-2 {
+.rectangle-h-8-8 {
     position: relative;
     width: 66%;
 }
@@ -110,37 +110,37 @@ body {
     padding-bottom: 200%;
 }
 
-.rectangle-h-1:after{
+.rectangle-h-4:after{
     content: "";
     display: block;
     padding-bottom: 33%;
 }
 
-.rectangle-h-2:after{
+.rectangle-h-8:after{
     content: "";
     display: block;
     padding-bottom: 66%;
 }
 
-.rectangle-h-2-2:after{
+.rectangle-h-8-8:after{
     content: "";
     display: block;
     padding-bottom: 75%;
 }
 
-.rectangle-v-2-2:after{
+.rectangle-v-8-8:after{
     content: "";
     display: block;
     padding-bottom: 150%;
 }
 
-.rectangle-v-2:after{
+.rectangle-v-8:after{
     content: "";
     display: block;
     padding-bottom: 150%;
 }
 
-.rectangle-v-1:after{
+.rectangle-v-4:after{
     content: "";
     display: block;
     padding-bottom: 300%;
@@ -294,5 +294,9 @@ body {
  }
 
 .layout-14 a:last-child {
+    margin-top: var(--double-internal-distance);
+}
+
+.layout-15 a:last-child, .layout-15 a:nth-child(2){
     margin-top: var(--double-internal-distance);
 }
