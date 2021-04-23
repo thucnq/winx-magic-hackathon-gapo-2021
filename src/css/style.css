@@ -419,3 +419,21 @@ body {
 .layout-22 a:last-child, .layout-22 a:nth-child(3){
     margin-top: var(--double-internal-distance);
 }
+
+.layout-23 a:nth-child(2){
+    width: calc(66% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+}
+
+.layout-23 a:last-child{
+    margin-top: -33%;
+}
+
+.layout-23 a:nth-child(3){
+    margin-top: 33.3%;
+    margin-left: -99%;
+}
+
+.layout-23 a:nth-child(2)::after{
+    padding-bottom: 152%;
+}
