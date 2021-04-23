@@ -195,3 +195,16 @@ body {
 .layout-8 a:last-child:after{
     padding-bottom: 101%;
 }
+
+.layout-9 a:nth-child(2) {
+    width: calc(50% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+}
+
+.layout-9 a:nth-child(2):after {
+    padding-bottom: 202%;
+}
+
+.layout-9 a:last-child {
+    margin-top: -50%;
+}
