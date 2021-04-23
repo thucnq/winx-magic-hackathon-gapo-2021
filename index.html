@@ -1,660 +1,920 @@
-<!doctype html
-<html>
-    <head>
-        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet">
-        <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel="stylesheet">
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
-        <link href="src/css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container mt-4 mb-5">
-            <div class="d-flex justify-content-center row">
-                <div class="col-md-8">
-                    <div class="feed p-2">
-                        <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border">
-                            <div class="feed-text px-2">
-                                <h6 class="text-black-50 mt-2">What's on your mind</h6>
-                            </div>
-                            <div class="feed-icon px-2"><i class="fa fa-long-arrow-up text-black-50"></i></div>
+<!doctype html <html>
+
+<head>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel="stylesheet">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel="stylesheet">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+    <script src='src/js/dropzone-5.7.0/dist/min/dropzone.min.js'></script>
+    <link href="src/js/dropzone-5.7.0/dist/dropzone.css" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet">
+    <script src='src/js/script.js'></script>
+</head>
+
+<body>
+    <div class="container mt-4 mb-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-8">
+                <div class="feed p-2">
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2 bg-white border" data-toggle="modal" data-target="#exampleModal">
+                        <div class="feed-text px-2">
+                            <h6 id="postarea" class="text-black-50 mt-2">What's on your mind?</h6>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="feed-icon px-2"><i class="fa fa-long-arrow-up text-black-50"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.</span></div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive" src="public/imgs/aoKusnD.jpg"></div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="feed-image p-2 px-3"><img class="img-fluid img-responsive"
+                                src="public/imgs/aoKusnD.jpg"></div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 1: 3 images (1 double square, 2 squares )</span></div>
-                            <div class="feed-image p-2 px-3 layout-1">
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 1: 3 images (1 double square, 2 squares )</span></div>
+                        <div class="feed-image p-2 px-3 layout-1">
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 2: 2 images (2 double horizon squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-2">
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 2: 2 images (2 double horizon squares)</span></div>
+                        <div class="feed-image p-2 px-3 layout-2">
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 3: 2 images (2 double vertical squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-3">
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 3: 2 images (2 double vertical squares)</span></div>
+                        <div class="feed-image p-2 px-3 layout-3">
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 4: 2 images (1 big horizon rectangle, 1 small horizon rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-4">
-                                <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 4: 2 images (1 big horizon rectangle, 1 small horizon
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-4">
+                            <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 5: 2 images (1 small horizon rectangle, 1 big horizon rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-5">
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 5: 2 images (1 small horizon rectangle, 1 big horizon
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-5">
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 6: 2 images (1 small vertical rectangle, 1 big vertical rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-6">
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 6: 2 images (1 small vertical rectangle, 1 big vertical
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-6">
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 7: 2 images (1 big vertical rectangle, 1 small vertical rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-7">
-                                <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 7: 2 images (1 big vertical rectangle, 1 small vertical
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-7">
+                            <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 8: 3 images (1 big vertical double square, 2 small squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-8">
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 8: 3 images (1 big vertical double square, 2 small
+                                squares)</span></div>
+                        <div class="feed-image p-2 px-3 layout-8">
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 9: 3 images (2 small squares, 1 big vertical double square)</span></div>
-                            <div class="feed-image p-2 px-3 layout-9">
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 9: 3 images (2 small squares, 1 big vertical double
+                                square)</span></div>
+                        <div class="feed-image p-2 px-3 layout-9">
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 10: 3 images (2 small squares, 1 big horizon double square)</span></div>
-                            <div class="feed-image p-2 px-3 layout-10">
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 10: 3 images (2 small squares, 1 big horizon double
+                                square)</span></div>
+                        <div class="feed-image p-2 px-3 layout-10">
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 11: 3 images (1 vertical rectangle, 2 big rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-11">
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 11: 3 images (1 vertical rectangle, 2 big
+                                rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-11">
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 12: 3 images (2 big rectangles, 1 vertical rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-12">
-                                <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 12: 3 images (2 big rectangles, 1 vertical
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-12">
+                            <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-8-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 13: 3 images (1 horizon rectangle, 2 big rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-13">
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 13: 3 images (1 horizon rectangle, 2 big
+                                rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-13">
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 14: 3 images (2 big rectangles, 1 horizon rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-14">
-                                <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 14: 3 images (2 big rectangles, 1 horizon
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-14">
+                            <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-8-6" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 15: 3 images (3 horizon rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-15">
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 15: 3 images (3 horizon rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-15">
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 16: 3 images (3 vertical rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-16">
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 16: 3 images (3 vertical rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-16">
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 17: 4 images (4 squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-17">
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 17: 4 images (4 squares)</span></div>
+                        <div class="feed-image p-2 px-3 layout-17">
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 18: 4 images (1 vertical double square, 3 rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-18">
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 18: 4 images (1 vertical double square, 3
+                                rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-18">
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 19: 4 images (3 rectangles, 1 vertical double square)</span></div>
-                            <div class="feed-image p-2 px-3 layout-19">
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-v" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 19: 4 images (3 rectangles, 1 vertical double
+                                square)</span></div>
+                        <div class="feed-image p-2 px-3 layout-19">
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-v" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 20: 4 images (3 rectangles, 1 horizon double square)</span></div>
-                            <div class="feed-image p-2 px-3 layout-20">
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 20: 4 images (3 rectangles, 1 horizon double
+                                square)</span></div>
+                        <div class="feed-image p-2 px-3 layout-20">
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 21: 4 images (1 horizon double square, 3 rectangles)</span></div>
-                            <div class="feed-image p-2 px-3 layout-21">
-                                <a class="double-square-h" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 21: 4 images (1 horizon double square, 3
+                                rectangles)</span></div>
+                        <div class="feed-image p-2 px-3 layout-21">
+                            <a class="double-square-h" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-6-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 22: 4 images (1 big vertical rectangle, 3 squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-22">
-                                <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 22: 4 images (1 big vertical rectangle, 3
+                                squares)</span></div>
+                        <div class="feed-image p-2 px-3 layout-22">
+                            <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 23: 4 images (3 squares, 1 big vertical rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-23">
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 23: 4 images (3 squares, 1 big vertical
+                                rectangle)</span></div>
+                        <div class="feed-image p-2 px-3 layout-23">
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 24: 4 images (3 squares, 1 big horizon rectangle)</span></div>
-                            <div class="feed-image p-2 px-3 layout-24">
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 24: 4 images (3 squares, 1 big horizon rectangle)</span>
+                        </div>
+                        <div class="feed-image p-2 px-3 layout-24">
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 25: 4 images (1 big horizon rectangle, 3 squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-25">
-                                <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="square square-v-4" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
-                        <div class="bg-white border mt-2">
-                            <div>
-                                <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
-                                    <div class="d-flex flex-row align-items-center feed-text px-2"><img class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
-                                        <div class="d-flex flex-column flex-wrap ml-2"><span class="font-weight-bold">Thomson ben</span><span class="text-black-50 time">40 minutes ago</span></div>
-                                    </div>
-                                    <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
+                        <div class="p-2 px-3"><span>Demo layout 25: 4 images (1 big horizon rectangle, 3 squares)</span>
+                        </div>
+                        <div class="feed-image p-2 px-3 layout-25">
+                            <a class="rectangle-h-8" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="square square-v-4" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
+                    </div>
+                    <div class="bg-white border mt-2">
+                        <div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 border-bottom">
+                                <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                        class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                                    <div class="d-flex flex-column flex-wrap ml-2"><span
+                                            class="font-weight-bold">Thomson ben</span><span
+                                            class="text-black-50 time">40 minutes ago</span></div>
                                 </div>
+                                <div class="feed-icon px-2"><i class="fa fa-ellipsis-v text-black-50"></i></div>
                             </div>
-                            <div class="p-2 px-3"><span>Demo layout 26: 4 images (1 big horizon rectangle, 3 squares)</span></div>
-                            <div class="feed-image p-2 px-3 layout-26">
-                                <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                                <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg" style="background-image: url('public/imgs/aoKusnD.jpg');">
-                                    <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive"/>
-                                </a>
-                            </div>
-                            <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                         </div>
+                        <div class="p-2 px-3"><span>Demo layout 26: 4 images (1 big horizon rectangle, 3 squares)</span>
+                        </div>
+                        <div class="feed-image p-2 px-3 layout-26">
+                            <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                            <a class="rectangle-v-3" href="public/imgs/aoKusnD.jpg"
+                                style="background-image: url('public/imgs/aoKusnD.jpg');">
+                                <img src="public/imgs/aoKusnD.jpg" alt="post-img" class="img-fluid img-responsive" />
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-end socials p-2 py-3"><i class="fa fa-thumbs-up"></i><i
+                                class="fa fa-comments-o"></i><i class="fa fa-share"></i></div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-2">
+                        <div class="d-flex flex-row align-items-center feed-text px-2"><img
+                                class="rounded-circle" src="public/imgs/aoKusnD.jpg" width="45">
+                            <div class="d-flex flex-column flex-wrap ml-2"><span
+                                    class="font-weight-bold">Thomson ben</span><span
+                                    class="text-black-50 time">Public</span></div>
+                        </div>
+                    </div>
+                </div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                What's on your mind?
+              <hr>
+              <div >
+                <form action="/file-upload" class="dropzone" id="dropzone">
+                    <div class="fallback">
+                      <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
 </html>

@@ -480,3 +480,20 @@ body {
 .layout-26 a:nth-child(2), .layout-26 a:nth-child(3), .layout-26 a:last-child{
     margin-left: var(--double-internal-distance);
 }
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus{
+    background-color: var(--pink-primary);
+    border-color: var(--pink-primary);
+    box-shadow: none;
+}
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
