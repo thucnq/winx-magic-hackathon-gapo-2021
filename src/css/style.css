@@ -72,10 +72,16 @@ body {
     width: 100%;
 }
   
-.square:after, .double-square-h:after, .double-square-v:after {
+.square:after{
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+
+.double-square-h:after, .double-square-v:after {
+    content: "";
+    display: block;
+    padding-bottom: 50%;
 }
   
 .content {
@@ -87,7 +93,6 @@ body {
 .layout-1 a:first-child {
     width: 100%;
     margin-bottom: var(--double-internal-distance);
-    height: 300px;
     overflow: hidden;
 }
 
