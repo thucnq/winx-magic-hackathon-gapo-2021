@@ -67,7 +67,7 @@ body {
     width: 50%;
 }
 
-.double-square-h {
+.double-square-h, .rectangle-v-1, .rectangle-v-2 {
     position: relative;
     width: 100%;
 }
@@ -88,6 +88,18 @@ body {
     content: "";
     display: block;
     padding-bottom: 200%;
+}
+
+.rectangle-v-1:after{
+    content: "";
+    display: block;
+    padding-bottom: 66%;
+}
+
+.rectangle-v-2:after{
+    content: "";
+    display: block;
+    padding-bottom: 33%;
 }
 
 .content {
@@ -121,5 +133,9 @@ body {
 .layout-3 a:last-child {
     width: calc(50% - var(--internal-distance));
     margin-left: var(--double-internal-distance);
+}
+
+.layout-4 a:last-child {
+    margin-top: var(--double-internal-distance);
 }
 
