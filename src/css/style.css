@@ -139,3 +139,7 @@ body {
     margin-top: var(--double-internal-distance);
 }
 
+.layout-5 a:last-child {
+    margin-top: var(--double-internal-distance);
+}
+
