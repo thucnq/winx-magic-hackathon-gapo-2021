@@ -378,3 +378,15 @@ body {
 .layout-20 a:nth-child(2), .layout-20 a:nth-child(3){
     margin-left: var(--double-internal-distance);
 }
+
+.layout-21 a:last-child, .layout-21 a:nth-child(2), .layout-21 a:nth-child(3){
+    width: calc(33.25% - var(--internal-distance));
+}
+
+.layout-21 a:first-child{
+    margin-bottom: var(--double-internal-distance);
+}
+
+.layout-21 a:last-child, .layout-21 a:nth-child(3){
+    margin-left: var(--double-internal-distance);
+}
