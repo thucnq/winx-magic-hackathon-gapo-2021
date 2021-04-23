@@ -172,3 +172,26 @@ body {
 .layout-6 a:last-child:after{
     padding-bottom: 151%;
 }
+
+.layout-7 a:last-child {
+    width: calc(33% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+}
+.layout-7 a:last-child:after{
+    padding-bottom: 303%;
+}
+
+.layout-8 a:nth-child(2) {
+    width: calc(50% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+}
+
+.layout-8 a:last-child {
+    width: calc(50% - var(--double-internal-distance));
+    margin-left: var(--double-internal-distance);
+    margin-top: var(--double-internal-distance);
+}
+
+.layout-8 a:last-child:after{
+    padding-bottom: 101%;
+}
