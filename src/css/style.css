@@ -77,6 +77,12 @@ body {
     width: 50%;
 }
 
+
+.rectangle-v-6-4{
+    position: relative;
+    width: 33%;
+}
+
 .rectangle-v-8 {
     position: relative;
     width: 66%;
@@ -139,10 +145,16 @@ body {
     padding-bottom: 150%;
 }
 
-.rectangle-h-6-4{
+.rectangle-h-6-4:after{
     content: "";
     display: block;
-    padding-bottom: 33%;
+    padding-bottom: 66.5%;
+}
+
+.rectangle-v-6-4:after{
+    content: "";
+    display: block;
+    padding-bottom: 150%;
 }
 
 .rectangle-v-8:after{
@@ -348,9 +360,21 @@ body {
 
 .layout-19 a:last-child{
     margin-top: -66.5%;
-    margin-left: 0px;
+    margin-left: -50%;
 }
 
 .layout-19 a:nth-child(3){
     margin-top: -33%;
+}
+
+.layout-20 a:first-child, .layout-20 a:nth-child(2), .layout-20 a:nth-child(3){
+    width: calc(33.25% - var(--internal-distance));
+}
+
+.layout-20 a:last-child{
+    margin-top: var(--double-internal-distance);
+}
+
+.layout-20 a:nth-child(2), .layout-20 a:nth-child(3){
+    margin-left: var(--double-internal-distance);
 }
