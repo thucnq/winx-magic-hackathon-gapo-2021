@@ -77,6 +77,11 @@ body {
     width: 66%;
 }
 
+.rectangle-v-2-2 {
+    position: relative;
+    width: 50%;
+}
+
 .double-square-h, .rectangle-h-1, .rectangle-h-2 {
     position: relative;
     width: 100%;
@@ -121,6 +126,12 @@ body {
     content: "";
     display: block;
     padding-bottom: 75%;
+}
+
+.rectangle-v-2-2:after{
+    content: "";
+    display: block;
+    padding-bottom: 150%;
 }
 
 .rectangle-v-2:after{
@@ -244,4 +255,44 @@ body {
 .layout-11 a:last-child {
     margin-top: var(--double-internal-distance);
     margin-left: var(--double-internal-distance);
+}
+
+.layout-12 a:first-child {
+    margin-right: var(--double-internal-distance);
+}
+
+.layout-12 a:nth-child(2)::after {
+    padding-bottom: 302%;
+ }
+
+.layout-12 a:last-child {
+    margin-right: var(--double-internal-distance);
+    margin-top: -50%;
+    
+}
+
+.layout-13 a:first-child {
+    margin-bottom: var(--double-internal-distance);
+}
+
+.layout-13 a:nth-child(2) {
+    width: calc(50% - var(--internal-distance));
+ }
+
+.layout-13 a:last-child {
+    margin-left: var(--double-internal-distance);
+    width: calc(50% - var(--internal-distance));
+}
+
+.layout-14 a:first-child {
+    width: calc(50% - var(--internal-distance));
+}
+
+.layout-14 a:nth-child(2) {
+    margin-left: var(--double-internal-distance);
+    width: calc(50% - var(--internal-distance));
+ }
+
+.layout-14 a:last-child {
+    margin-top: var(--double-internal-distance);
 }
