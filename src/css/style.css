@@ -300,3 +300,23 @@ body {
 .layout-15 a:last-child, .layout-15 a:nth-child(2){
     margin-top: var(--double-internal-distance);
 }
+
+.layout-16 a{
+    width: calc(33% - var(--internal-distance));
+}
+
+.layout-16 a:last-child, .layout-16 a:nth-child(2){
+    margin-left: var(--double-internal-distance);
+}
+
+.layout-17 a{
+    width: calc(50% - var(--internal-distance));
+}
+
+.layout-17 a:last-child, .layout-17 a:nth-child(3){
+    margin-top: var(--double-internal-distance);
+}
+
+.layout-17 a:last-child, .layout-17 a:nth-child(2){
+    margin-left: var(--double-internal-distance);
+}
